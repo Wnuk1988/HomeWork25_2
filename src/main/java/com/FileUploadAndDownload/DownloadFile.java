@@ -18,7 +18,7 @@ public class DownloadFile extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
             String titleBook = req.getParameter("title");
-            String nameFile = titleBook + ".log";
+            String nameFile = titleBook + ".txt";
             byte[] arrayByte = Files.readAllBytes(Paths.get("D:\\" + nameFile));
             ServletOutputStream serOutStr = resp.getOutputStream();
             resp.setContentType("application/txt");
